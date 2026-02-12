@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vía Láctea</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <!-- Pantalla 1: Acceso -->
+  <section id="gate" class="panel active" aria-hidden="false">
+    <div class="card">
+      <pre id="type" class="type"></pre>
+
+      <div class="auth">
+        <label for="pwd" class="label">Confirmar identidad</label>
+        <input id="pwd" class="input" type="password" placeholder="" autocomplete="off" />
+        <button id="confirmBtn" class="btn">Confirmar</button>
+        <div id="authMsg" class="authMsg" aria-live="polite"></div>
+      </div>
+
+      <div id="loader" class="loader" hidden>
+        <div class="loaderText">Desbloqueando mensaje...</div>
+        <div class="bar"><div class="barFill" id="barFill"></div></div>
+      </div>
+
+      <button id="enterBtn" class="btn" disabled hidden>Entrar</button>
+    </div>
+  </section>
+
+  <!-- Pantalla 2: Contenido -->
+  <main id="main" class="panel" aria-hidden="true">
+    <div class="mainWrap">
+
+      <!-- Columna texto (y en móvil aquí irá el acompañante justo después del hero) -->
+      <section class="contentCol">
+
+        <header class="hero">
+          <h1 class="valTitle">Feliz San Valentín</h1>
+          <div class="valSub">Perdidamente enamorado por ti</div>
+
+          <p class="tagline">
+            He creado este acompañante para que este contigo toda la vida mi amor
+          </p>
+        </header>
+
+        <!-- ✅ ACOMPAÑANTE MOVIDO AQUÍ: ahora sí queda justo después del primer texto -->
+        <aside class="sideCol" aria-label="Memorex">
+          <img src="commander.png" alt="Memorex" class="commander" />
+        </aside>
+
+        <section class="letter">
+          <h2>Para ti mi princesa</h2>
+          <p>
+            Desde que apareciste, todo se siente como si el universo tuviera sentido.
+            No sé explicar lo grande que es esto… pero sí puedo intentarlo
+          </p>
+          <p>
+            Estar contigo se siente como una canción de Zoe
+          </p>
+        </section>
+
+        <section class="actions">
+          <button class="actionCard" data-modal="feel">✨ ¿Qué siento?</button>
+          <button class="actionCard" data-modal="want">💫 ¿Qué quiero contigo?</button>
+        </section>
+
+        <section class="extra">
+          <p class="extraMsg">
+            Sé que amas este álbum pero yo te amo más a ti, compartamos para siempre dados de la mano este camino por la infinitud del tiempo
+          </p>
+
+          <div class="photoWrap">
+            <img src="Nosotros.jpeg" alt="Nosotros" class="photo" />
+          </div>
+
+          <div class="teamo">Te amooooooooo</div>
+          <div class="credits">Hecho con mucho amor por tu noviecito</div>
+
+          <a href="AI NO HIKARI"
+             target="_blank"
+             class="creationBox">
+             La creación
+    </a>
+
+        </section>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Audios -->
+  <audio id="bgAudio" src="MemoRex.mp3" loop preload="auto"></audio>
+  <audio id="feelAudio" src="ViaLactea.mp3" loop preload="auto"></audio>
+  <audio id="wantAudio" src="CorazonAtomico.mp3" loop preload="auto"></audio>
+
+  <!-- Modales -->
+  <dialog id="feel" class="modal">
+    <h3>Esta canción es para ti mi amor</h3>
+    <p>Este es nuestro primer San Valentín como noviecitos mi amorrr, estoy muy feliz y emocionado de poder compartirlo contigo corazón, agradezco cada momento que he pasado y comparto contigo mi princesa, eres lo mejor que me ha pasado y espero que algun momento puedas empezar a verte como yo te veo, la niña más perfecta y hermosa de todo el universo, muchas veces no sé que tanto puedo de verdad mostrarte todo lo que siento por ti pero quiero que sepas que es un amor infinito el cual quiero cuidar para siempre para que estemos juntos un exceso de tiempo y seguir mejorando y creciendo como noviecitos y como personas mi amor, te adoroooo y quiero compartir este camino contigo por toda la Vía Láctea, porque las noches parecen eternas cuando tu no estás. Te puedo dar un besito?</p>
+    <button class="btn small" data-close>Cerrar</button>
+  </dialog>
+
+  <dialog id="want" class="modal">
+    <h3>Eres el amor de mi vida</h3>
+    <p>Quiero estar contigo para la eternidad para acariciar tu alma, suavizar tu ser, esterilizar tu sangre y purificar tu amor. Te amo con toda mi alma corazoncito de melocotón</p>
+    <button class="btn small" data-close>Cerrar</button>
+  </dialog>
+
+  <script src="stars.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
